@@ -1,3 +1,7 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Root Component</h1>
+<fa-lifecycle *ngIf="!delete" [bindable]="bindValue">
+    <p #boundContent>{{test}}</p>
+</fa-lifecycle>
+<button (click)="delete = true">Click</button>
+<button (click)="test = 'Change Value'">Click Content</button>
+<button (click)="bindValue = 2000">Click Vaule</button>
