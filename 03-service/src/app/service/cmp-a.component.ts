@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { LogService } from './log.service';
+
 @Component({
   selector: 'si-cmp-a',
   template: `
@@ -20,14 +22,20 @@ import { Component } from '@angular/core';
         <p>{{value}}</p>
     </div>
   `,
-  styles: []
+  styles: [],
+  providers: [LogService]
 })
 export class CmpAComponent {
   value = '';
+
+  constructor (private logService: LogService){
+
+  }
+
   items: string[] = [];
 
   onLog(value: string){
-
+    this.logService.writeToLog(value);
   }
   onStore(value: string){
 
