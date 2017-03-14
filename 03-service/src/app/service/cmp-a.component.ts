@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { LogService } from './log.service';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'si-cmp-a',
@@ -23,12 +24,12 @@ import { LogService } from './log.service';
     </div>
   `,
   styles: [],
-  providers: [LogService]
+  providers: [LogService, DataService]
 })
 export class CmpAComponent {
   value = '';
 
-  constructor (private logService: LogService){
+  constructor (private logService: LogService, private dataService: DataService){
 
   }
 
@@ -38,10 +39,10 @@ export class CmpAComponent {
     this.logService.writeToLog(value);
   }
   onStore(value: string){
-
+    this.dataService.addData(value);
   }
   onGet(){
-
+    this.items = this.dataService.getData().slice(0);
   }
   onSend(value: string){
 
