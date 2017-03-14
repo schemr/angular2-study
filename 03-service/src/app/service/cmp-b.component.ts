@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-
 import { LogService } from './log.service';
 import { DataService } from './data.service';
+
 
 @Component({
   selector: 'app-cmp-b',
@@ -23,8 +23,7 @@ import { DataService } from './data.service';
         <p>{{value}}</p>
     </div>
   `,
-  styles: [],
-  providers: [LogService, DataService]
+  styles: []
 })
 export class CmpBComponent {
   value = '';

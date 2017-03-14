@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { CmpAComponent } from './service/cmp-a.component';
 import { CmpBComponent } from './service/cmp-b.component';
 import { ServiceComponent } from './service/service.component';
+import { DataService } from './service/data.service';
+import { LogService } from './service/log.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { ServiceComponent } from './service/service.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DataService, LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
