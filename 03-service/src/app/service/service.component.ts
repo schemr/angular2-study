@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <p>
       <si-cmp-a></si-cmp-a>
-      <si-cmp-a></si-cmp-a>
+      <si-cmp-b></si-cmp-b>
     </p>
   `,
   styles: []

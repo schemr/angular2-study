@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LogService } from './log.service';
 import { DataService } from './data.service';
 
 
 @Component({
-  selector: 'app-cmp-b',
+  selector: 'si-cmp-b',
   template: `
     <div>
       <input type="text" #input>
@@ -25,7 +25,7 @@ import { DataService } from './data.service';
   `,
   styles: []
 })
-export class CmpBComponent {
+export class CmpBComponent implements OnInit {
   value = '';
   constructor (private logService: LogService, private dataService: DataService) {
 
@@ -40,10 +40,9 @@ export class CmpBComponent {
   onGet(){
     this.items = this.dataService.getData().slice(0);
   }
-  onSend(value: string){
-
-  }
-  onOnInit(){
-    
+  ngOnInit(){
+    this.dataService.pushedData.subscribe(
+      data => this.value = data
+    );
   }
 }
