@@ -24,7 +24,7 @@ export class UserComponent implements OnDestroy {
     );
   }
   onNavigate(){
-    this.router.navigate(['/']);
+    this.router.navigate(['/'], {queryParams:{'analytics':100}});
   }
   // 메모리 누수를 막기위한 subscribe destroy
   ngOnDestroy() {
