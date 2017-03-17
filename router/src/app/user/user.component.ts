@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     <button (click)="onNavigate()">Go Home</button>
     <hr>
     {{id}}
+    <router-outlet></router-outlet>
   `,
   styles: []
 })
