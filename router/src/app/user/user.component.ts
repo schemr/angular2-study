@@ -24,6 +24,7 @@ export class UserComponent implements OnDestroy {
     );
   }
   onNavigate(){
+    // Fragment 의 경우도 queryPrams 와 같은형태로 사용 
     this.router.navigate(['/'], {queryParams:{'analytics':100}});
   }
   // 메모리 누수를 막기위한 subscribe destroy
