@@ -3,7 +3,9 @@
         <div class="col-md-12">
             <h1>Hello World!</h1>
             <hr>
-            <a [routerLink]="['']" [queryParams]="{analytics:500}">Home</a> |
+            <div routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['']" [queryParams]="{analytics:500}">Home</a>
+            </div>
             <input type="text" #id (input)="0">
             <a [routerLink]="['user', id.value]" routerLinkActive="active">User</a>
             <hr>

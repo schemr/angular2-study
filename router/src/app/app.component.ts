@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles:[
-    '.active {font-weight: bold}'
+  styles:[`
+    .active {border: 1px solid red}
+  `
   ]
 })
 export class AppComponent {
