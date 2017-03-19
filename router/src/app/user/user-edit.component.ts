@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Rx';
-import { ComponentCanDeactivate } from './user-edit.quard';
+import { ComponentCanDeactivate } from './user-edit.guard';
 import { CanDeactivate, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
