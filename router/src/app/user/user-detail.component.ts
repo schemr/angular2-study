@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-user-detail',
   template: `
-    <p>
-      user-detail Works!
-    </p>
+    <h3>
+      User Detail
+    </h3>
   `,
   styles: []
 })
