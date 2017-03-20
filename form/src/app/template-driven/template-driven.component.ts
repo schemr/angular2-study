@@ -18,6 +18,6 @@ export class TemplateDrivenComponent {
     password: ''
   }
   onSubmit(form: NgForm){
-    console.log(this.user)
+    console.log(form.value)
   }
 }
