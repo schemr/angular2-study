@@ -29,7 +29,7 @@ export class DataDrivenComponent {
     // });
     this.myForm = formBuilder.group({
       'userData' : formBuilder.group({
-        'username': ['Chris', Validators.required],
+        'username': ['Chris', [Validators.required, this.exampleValidator]],
         'email': ['', [
             Validators.required, 
             Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
@@ -47,5 +47,11 @@ export class DataDrivenComponent {
   }
   onAddHobby(){
     (<FormArray>this.myForm.get('hobbies')).push(new FormControl('', Validators.required));
+  }
+  exampleValidator(control: FormControl): {[s: string]:boolean} {
+    if(control.value === 'Example'){
+      return {example: true};
+    }
+    return null;
   }
 }
