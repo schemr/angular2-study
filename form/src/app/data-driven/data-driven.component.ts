@@ -42,6 +42,14 @@ export class DataDrivenComponent {
           ['Cooking', Validators.required, this.asyncExampleValidator]
       ])
     });
+    // Status Change
+     this.myForm.statusChanges.subscribe(
+      (data: any) => console.log(data)
+    );
+    // Value Change
+    this.myForm.valueChanges.subscribe(
+      (data: any) => console.log(data)
+    );
   }
   onSubmit(){
     console.log(this.myForm)
