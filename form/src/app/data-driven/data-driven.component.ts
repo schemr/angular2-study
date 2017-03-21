@@ -77,4 +77,8 @@ export class DataDrivenComponent {
     );
     return promise;
   }
+  // Form Data Reset (null)
+  reset(){
+    this.myForm.reset();
+  }
 }
