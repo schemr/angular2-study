@@ -13,5 +13,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   myValue = "lowercase";
   myDate = new Date(2017,3,23);
-  values = ['Milk','Bread','Beans']
+  values = ['Milk','Bread','Beans'];
+  asyncValue = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Data is here!'), 2000)
+  })
 }
