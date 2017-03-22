@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
   `]
 })
 export class AppComponent {
-  myValue="lowercase";
-  myDate=new Date(2017,3,23);
+  myValue = "lowercase";
+  myDate = new Date(2017,3,23);
+  values = ['Milk','Bread','Beans']
 }
