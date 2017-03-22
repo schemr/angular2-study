@@ -5,4 +5,8 @@
   <p>{{myDate | date:"yyyy-MM-dd"}}</p>
   <p>{{myValue | slice:3:7 | uppercase}}</p>
   <p><a href="https://angular.io/docs/ts/latest/api/#!?query=pipe">Docs URL</a></p>
+  <hr>
+  <h2>Custom Pipe</h2>
+  <input type="text" #input (keyup)="0">
+  <p>{{input.value | double}}</p>
 </div>
