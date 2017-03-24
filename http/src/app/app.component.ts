@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Response } from '@angular/http';
 import { HttpService } from './http.service';
 
@@ -6,15 +6,13 @@ import { HttpService } from './http.service';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   constructor(private httpService: HttpService){}
 
-  ngOnInit() {
-    this.httpService.getData()
+  onSubmit(username: string, email:string){
+    this.httpService.sendData({username: username, email:email})
       .subscribe(
-        (data: Response) => {
-          console.log(data);
-        }
-      );
+        data => console.log(data)
+      )
   }
 }
