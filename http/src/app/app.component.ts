@@ -11,6 +11,8 @@ export class AppComponent {
 
   constructor(private httpService: HttpService){}
 
+  asyncString = this.httpService.getData();
+
   onSubmit(username: string, email:string){
     this.httpService.sendData({username: username, email:email})
       .subscribe(
