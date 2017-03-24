@@ -14,7 +14,6 @@ export class AppComponent implements OnInit{
       .subscribe(
         (data: Response) => {
           console.log(data);
-          console.log(data.json())
         }
       );
   }
