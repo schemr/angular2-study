@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
         this.isEmail
       ])],
       password: ['', Validators.required],
-      comfirmPassword: ['', Validators.compose([
+      confirmPassword: ['', Validators.compose([
         Validators.required,
         this.isEqualPassword.bind(this)
       ])]
