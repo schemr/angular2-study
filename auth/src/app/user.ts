@@ -1,5 +1,5 @@
 export interface User {
     email: string;
-    passworld: string;
-    confirmPassword: string;
+    password: string;
+    confirmPassword?: string;
 }
